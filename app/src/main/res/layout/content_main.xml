@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.fitnessapp.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/gym">
+
+    <ImageView
+        android:id="@+id/user_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_def_icon" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="226dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="#8AFFFFFF"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_image_view"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textview_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textview_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/height"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textview_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/weight"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider">
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/facebook_share_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:enabled="true"
+            android:gravity="center_vertical"
+            app:fb_backgroundColor="#3F51B5"
+            app:fb_cornerRadius="16dp"
+            app:fb_divColor="#fff"
+            app:fb_divHeight="32dp"
+            app:fb_divWidth="1dp"
+            app:fb_icon="@drawable/facebook_icon"
+            app:fb_iconColor="#FFF"
+            app:fb_iconHeight="28dp"
+            app:fb_iconMarginEnd="16dp"
+            app:fb_iconMarginStart="20dp"
+            app:fb_iconPosition="left"
+            app:fb_iconWidth="28dp"
+            app:fb_rippleColor="#FBE9E7"
+            app:fb_shape="rectangle"
+            app:fb_text="@string/facebook_share"
+            app:fb_textColor="#FFF"
+            app:fb_textPaddingStart="16dp" />
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/whatsapp_share_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="32dp"
+            android:enabled="true"
+            android:gravity="center_vertical"
+            app:fb_backgroundColor="#4FCE5D"
+            app:fb_cornerRadius="16dp"
+            app:fb_divColor="#fff"
+            app:fb_divHeight="32dp"
+            app:fb_divWidth="1dp"
+            app:fb_icon="@drawable/whatsapp_icon"
+            app:fb_iconColor="#FFF"
+            app:fb_iconHeight="28dp"
+            app:fb_iconMarginEnd="16dp"
+            app:fb_iconMarginStart="20dp"
+            app:fb_iconPosition="left"
+            app:fb_iconWidth="28dp"
+            app:fb_rippleColor="#FBE9E7"
+            app:fb_shape="rectangle"
+            app:fb_text="@string/whatsapp_share"
+            app:fb_textColor="#FFF"
+            app:fb_textPaddingStart="16dp" />
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/twitter_share_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="32dp"
+            android:enabled="true"
+            android:gravity="center_vertical"
+            app:fb_backgroundColor="#03A9F4"
+            app:fb_cornerRadius="16dp"
+            app:fb_divColor="#fff"
+            app:fb_divHeight="32dp"
+            app:fb_divWidth="1dp"
+            app:fb_icon="@drawable/twitter_icon"
+            app:fb_iconColor="#FFF"
+            app:fb_iconHeight="28dp"
+            app:fb_iconMarginEnd="16dp"
+            app:fb_iconMarginStart="20dp"
+            app:fb_iconPosition="left"
+            app:fb_iconWidth="28dp"
+            app:fb_rippleColor="#FBE9E7"
+            app:fb_shape="rectangle"
+            app:fb_text="@string/twitter_share"
+            app:fb_textColor="#FFF"
+            app:fb_textPaddingStart="16dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
